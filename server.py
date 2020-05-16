@@ -29,6 +29,15 @@ class ChargePoint(cp) :
             status=RegistrationStatus.accepted
         )
 
+async def on_connect ( websocket, path ) :
+    """ For every new charge point that connects, create a ChargePoint instance
+   and start listening for messages.
+
+   """
+    charge_point_id = path.strip('/')
+    cp = ChargePoint(charge_point_id, websocket)
+
+    await asyncio.gather(cp.start(),cp.send_trigger_message())
     
   sync def main():
     server = await websockets.serve(
