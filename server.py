@@ -36,6 +36,7 @@ async def on_connect ( websocket, path ) :
    """
     charge_point_id = path.strip('/')
     cp = ChargePoint(charge_point_id, websocket)
+    print("Client Connected")
 
     await asyncio.gather(cp.start(),cp.send_trigger_message())
     
