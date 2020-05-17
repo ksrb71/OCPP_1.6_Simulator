@@ -28,6 +28,15 @@ class ChargePoint(cp) :
             interval=10,
             status=RegistrationStatus.accepted
         )
+    
+    
+    @on(Action.Authorize)
+    def on_authorize ( self, **kwargs ) :
+        return call_result.AuthorizePayload(
+            dict([('status', "Accepted"), ('expiryDate', "2023-09-17T10:44:33.638259"),
+                  ('parentIdTag', "Rajanbabu_simulator")])   ## Parent id taqge belongs to charger
+        )
+
 
 async def on_connect ( websocket, path ) :
     """ For every new charge point that connects, create a ChargePoint instance
@@ -37,6 +46,9 @@ async def on_connect ( websocket, path ) :
     charge_point_id = path.strip('/')
     cp = ChargePoint(charge_point_id, websocket)
     print("Client Connected")
+    
+    
+    
 
     await asyncio.gather(cp.start(),cp.send_trigger_message())
     
