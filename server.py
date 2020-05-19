@@ -38,6 +38,15 @@ class ChargePoint(cp) :
         )
 
 
+    
+    @on(Action.Heartbeat)
+    def on_heartbeat ( self, **kwargs ) :
+        return call_result.HeartbeatPayload(
+            current_time=datetime.utcnow( ).isoformat( )
+        )
+    
+    
+    
 async def on_connect ( websocket, path ) :
     """ For every new charge point that connects, create a ChargePoint instance
    and start listening for messages.
