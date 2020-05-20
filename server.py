@@ -44,6 +44,12 @@ class ChargePoint(cp) :
         return call_result.HeartbeatPayload(
             current_time=datetime.utcnow( ).isoformat( )
         )
+    @on(Action.StatusNotification)
+    def on_status_notification ( self, **kwargs ) :
+        return call_result.StatusNotificationPayload(
+
+        )
+
     
     
     
