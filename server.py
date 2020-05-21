@@ -44,10 +44,19 @@ class ChargePoint(cp) :
         return call_result.HeartbeatPayload(
             current_time=datetime.utcnow( ).isoformat( )
         )
+    
     @on(Action.StatusNotification)
     def on_status_notification ( self, **kwargs ) :
         return call_result.StatusNotificationPayload(
 
+        )
+    
+     @on(Action.StartTransaction)
+    def on_start_transaction ( self, **kwargs ) :
+        return call_result.StartTransactionPayload(
+            dict([('status', "Accepted"), ('expiryDate', "2023-09-17T10:44:33.638259"),
+                  ('parentIdTag', "Rajansimulator")]),
+            transaction_id=1
         )
 
     
