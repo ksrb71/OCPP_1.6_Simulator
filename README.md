@@ -7,3 +7,4 @@ found github commit is not taking properly when we uodate commit change sometime
 herart beat command updated
 status notification added
 Start transaction function added
+Diagnostic status notification added
