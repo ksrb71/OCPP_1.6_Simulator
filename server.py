@@ -58,7 +58,11 @@ class ChargePoint(cp) :
                   ('parentIdTag', "Rajansimulator")]),
             transaction_id=1
         )
+    @on(Action.DiagnosticStatusNotification)
+    def on_send_diagnos ( self, **kwargs ) :
+        return call_result.DiagnosticStatusNotificationPayload(
 
+        )
     
     
     
