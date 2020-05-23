@@ -63,6 +63,11 @@ class ChargePoint(cp) :
         return call_result.DiagnosticStatusNotificationPayload(
 
         )
+    @on(Action.FirmwareStatusNotification)
+    def on_send_firmware_status ( self, **kwargs ) :
+        return call_result.FirmwareStatusNotificationPayload(
+
+        )
     
     
     
