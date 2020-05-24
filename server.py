@@ -73,6 +73,21 @@ class ChargePoint(cp) :
     #function  update need
     
     
+    @on(Action.DataTransfer)
+    def on_send_data_transfer ( self, **kwargs ) :
+        return call_result.DataTransferPayload(
+            status=DataTransferStatus.accepted,
+            data="Charger request data"
+
+        )
+    #function for charger data transmited
+    
+    
+    
+    
+    
+    
+    
 async def on_connect ( websocket, path ) :
     """ For every new charge point that connects, create a ChargePoint instance
    and start listening for messages.
