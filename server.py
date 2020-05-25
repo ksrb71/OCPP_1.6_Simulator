@@ -82,6 +82,13 @@ class ChargePoint(cp) :
         )
     #function for charger data transmited
     
+    @on(Action.StopTransaction)
+    def on_send_stop_transaction ( self, **kwargs ) :
+        return call_result.StopTransactionPayload(
+            id_tag_info=dict([('status', "Accepted"), ('expiryDate', "2023-09-17T10:44:33.638259"),
+                              ('parentIdTag', "Rajansimulator")])
+        )
+#stop transaction added
     
     
     
