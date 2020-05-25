@@ -9,3 +9,4 @@ status notification added
 Start transaction function added
 Diagnostic status notification added
 Data transfer function added
+stop transaction added @25/05/20
