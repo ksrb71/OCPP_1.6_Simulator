@@ -1,12 +1,22 @@
-# OCPP_1.6_Simulator
-Electric Charger simulator for client server communication 
-Here implemented maximum commands and how ti will communicate
+# __Open Charge Point Protocol 1.6 Server__
 
-Autorize function added
-found github commit is not taking properly when we uodate commit change sometime 18/05/2020 commit done but not found commit changes
-herart beat command updated
-status notification added
-Start transaction function added
-Diagnostic status notification added
-Data transfer function added
-stop transaction added @25/05/20
+##Inroduction
+     
+     This Project have  running  code of OCPP1.6 _J  Server Model  and accept OCPP1.6 _J Charger client communication.
+     I am consider this link [OPEN CHARGE ALLIANCE](https://www.openchargealliance.org/protocols/ocpp-16/).
+     
+     Here i will develop complete code and my refrence document will be a OCPP1.6 -J protocol and OCPP1.6-J specification.
+     
+     Feat: Authorize Function written
+     Feat:Heartbeat Function written
+     Feat: Status notification Function written
+     Feat: Start transaction Function written
+     Feat: Diagnostic Status Function written
+     Feat: Data Transfer Function written
+     Feat: Stop Transaction Function written
+     Feat: Authorize Function written
+     Docs:Documents added in to this repo
+     
+
+
+
