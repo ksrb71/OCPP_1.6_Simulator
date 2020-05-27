@@ -72,7 +72,11 @@ class ChargePoint(cp) :
         )
     #function  update need
     
-    
+    @on(Action.MeterValues)
+    def on_send_meter_value(self,**kwargs):
+        return call_result.MeterValuesPayload(
+
+        )
     @on(Action.DataTransfer)
     def on_send_data_transfer ( self, **kwargs ) :
         return call_result.DataTransferPayload(
