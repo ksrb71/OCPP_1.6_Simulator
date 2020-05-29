@@ -17,6 +17,9 @@
      Feat: Authorize Function written
      Docs:Documents added in to this repo
      
+     Feat:firmware update request
+    
+     
 
 
 
