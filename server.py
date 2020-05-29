@@ -93,6 +93,16 @@ class ChargePoint(cp) :
                               ('parentIdTag', "Rajansimulator")])
         )
 #stop transaction added
+
+    async def send_update_firmware ( self ) :
+        request = call.UpdateFirmwarePayload(
+            location="127.0.0.1:8001",
+            retrieve_date=datetime.utcnow( ).isoformat( ),
+            retries=3,
+            retry_interval=45
+        )
+        
+# firmware update request
     
     
     
