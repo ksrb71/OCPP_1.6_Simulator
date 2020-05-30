@@ -103,6 +103,15 @@ class ChargePoint(cp) :
         )
         
 # firmware update request
+    async def send_unlock ( self ) :
+        request = call.UnlockConnectorPayload(
+            connector_id=1
+        )
+        print("unlock connector send")
+        print(request)
+        response = await self.call(request)
+        print(response)
+        print("Unlock connector response received")
     
     
     
