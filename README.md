@@ -18,6 +18,7 @@
      Docs:Documents added in to this repo
      
      Feat:firmware update request
+     feat: unlock command added
     
      
 
